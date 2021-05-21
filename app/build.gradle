@@ -62,5 +62,7 @@ dependencies {
     // Dagger 2
     def dagger_version = "2.33"
     implementation "com.google.dagger:dagger:$dagger_version"
+    implementation "com.google.dagger:dagger-android-support:2.33"
+    kapt "com.google.dagger:dagger-android-processor:2.33"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
 }
