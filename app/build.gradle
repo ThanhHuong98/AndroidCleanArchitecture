@@ -11,6 +11,10 @@ android {
     compileSdk 30
     buildToolsVersion "30.0.3"
 
+    buildFeatures {
+        dataBinding true
+    }
+
     defaultConfig {
         applicationId "com.example.baseproject"
         minSdk 21
@@ -59,7 +63,7 @@ dependencies {
     // Gson body parser
     implementation 'com.google.code.gson:gson:2.8.6'
 
-    // Dagger 2
+    // Dagger 2 & dagger support for android
     def dagger_version = "2.33"
     implementation "com.google.dagger:dagger:$dagger_version"
     implementation "com.google.dagger:dagger-android-support:2.33"
