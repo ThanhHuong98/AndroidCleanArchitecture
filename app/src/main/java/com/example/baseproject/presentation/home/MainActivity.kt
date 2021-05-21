@@ -9,9 +9,8 @@ class MainActivity : DaggerSharedActivity() {
     @Inject
     lateinit var mainViewModel: MainViewModel
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-
-        super.onCreate(savedInstanceState)
+    override fun onSyncViews(savedInstanceState: Bundle?) {
+        super.onSyncViews(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
 }
