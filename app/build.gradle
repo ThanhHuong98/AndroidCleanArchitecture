@@ -6,7 +6,11 @@ plugins {
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
 
+androidExtensions {
+    experimental = true
+}
 android {
     compileSdk 30
     buildToolsVersion "30.0.3"
@@ -50,13 +54,13 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    // Retrofit http://square.github.io/retrofit
+    // Retrofit: http://square.github.io/retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava:2.4.0'
     implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
 
-    // https://github.com/ReactiveX/RxAndroid
+    // RxAndroid + RxJav: https://github.com/ReactiveX/RxAndroid
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
 
@@ -69,4 +73,17 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:2.33"
     kapt "com.google.dagger:dagger-android-processor:2.33"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+    // Lifecycle components
+    def lifecycle_version = "2.3.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+
+    // Coroutines
+    def coroutines_version = "1.4.3"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+
+
 }

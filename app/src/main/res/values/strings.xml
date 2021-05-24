@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BaseProject</string>
+    <string name="btn_loading_api">Loading API</string>
 </resources>
