@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/charactersFragment"
-        android:name="com.example.baseproject.presentation.character.FragmentCharacters"
+        android:name="com.example.baseproject.presentation.character.CharactersFragment"
         android:label="Fragment Characters"
         tools:layout="@layout/fragment_characters">
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/detailCharacterFragment"
-        android:name="com.example.baseproject.presentation.detail.FragmentDetail"
+        android:name="com.example.baseproject.presentation.detail.DetailFragment"
         android:label="Fragment Detail Character"
         tools:layout="@layout/fragment_detail_character">
     </fragment>

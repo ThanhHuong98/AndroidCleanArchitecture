@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import com.example.baseproject.R
 import com.example.baseproject.core.fragments.BaseFragment
 
-class FragmentDetail : BaseFragment() {
+class DetailFragment : BaseFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
