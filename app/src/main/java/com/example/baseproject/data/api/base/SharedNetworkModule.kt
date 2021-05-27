@@ -1,11 +1,15 @@
 package com.example.baseproject.data.api.base
 
-import com.example.baseproject.utils.extension.SkipNetworkInterceptor
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+
+/**
+ * .addCallAdapterFactory(RxJava2CallAdapterFactory.create()) if you use RxJava2
+ * . if you use Coroutine -> config following
+ * */
 abstract class SharedNetworkModule {
     fun getRetrofit() : Retrofit {
         return Retrofit.Builder()
@@ -18,8 +22,14 @@ abstract class SharedNetworkModule {
     inline fun <reified S> getService(): S = getRetrofit().create(S::class.java)
 
     open fun getOkHttpClient(): OkHttpClient {
-        return OkHttpClient.Builder()
+        /**
+         * Using SkipNetworkInterceptor() for testing: You want config api by yourself
+         *  return OkHttpClient.Builder()
             .addInterceptor(SkipNetworkInterceptor())
+            .build()
+         * otherwise, config any thing you want here about OkHttp-Client
+         * */
+        return OkHttpClient.Builder()
             .build()
     }
 

@@ -31,7 +31,7 @@ class MainViewModel @Inject constructor(private val repository: ABCRepository): 
             .addTo(getCompositeDisposable())
     }
 
-    // Handle long-task by coroutine
+    // Handle long-task by coroutine -> using SkipNetWorkInterceptor to test this function
     fun refershTitle() {
         viewModelScope.launch {
             try {
