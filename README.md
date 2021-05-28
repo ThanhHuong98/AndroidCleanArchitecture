@@ -25,11 +25,10 @@ This is my base project for android coding. I have used the rich Jetpack libs an
     - [Navigation](https://developer.android.com/guide/navigation/) - helps you implement navigation, from simple button clicks to more complex patterns, such as app bars and the navigation drawer.
     - [Paging](https://developer.android.com/topic/libraries/architecture/paging/) - helps you load and display small chunks of data at a time. Loading partial data on demand reduces usage of network bandwidth and system resources.
     - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - designed to store and manage UI-related data in a lifecycle conscious way. The ViewModel class allows data to survive configuration changes such as screen rotations.
-    - [Worker](https://developer.android.com/reference/androidx/work/Worker) - A class that performs work synchronously on a background thread provided by WorkManager.
-- [Dagger2](https://dagger.dev/) - dependency injector for replacement all FactoryFactory classes.
+- [Dagger2](https://dagger.dev/) - dependency injector for replacement all Factory classes.
 - [Retrofit](https://square.github.io/retrofit/) - type-safe HTTP client.
 - [Glide](https://github.com/bumptech/glide) - Glide is a fast and efficient open source media management and image loading framework for Android that wraps media decoding, memory and disk caching, and resource pooling into a simple and easy to use interface.
-
+- [Kotlin-Coroutines](https://kotlinlang.org/docs/coroutines-basics.html) - is a rich library for coroutines developed by JetBrains. It contains a number of high-level coroutine-enabled primitives that this guide covers, including launch, async and others.
 
 
 
