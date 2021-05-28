@@ -3,6 +3,9 @@ package com.example.baseproject.data.api.base
 import com.google.gson.annotations.SerializedName
 import java.net.HttpURLConnection
 
+/**
+ * Handle BaseResponse depend on  your server config -> If not, using <Response> Retrofit2
+ * */
 data class BaseResponse<T>(
     @field:SerializedName("errorCode")
     val errorCode: String? = "",

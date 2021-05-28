@@ -6,7 +6,7 @@ import com.example.baseproject.data.models.User
 import io.reactivex.Single
 import retrofit2.Response
 
-interface ABCRepository {
+interface CharacterRepository {
     fun getUsers() : Single<BaseResponse<List<User>>>
 
     suspend fun fetchNextTitle(): String

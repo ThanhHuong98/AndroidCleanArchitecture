@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.baseproject.R
 import com.example.baseproject.core.fragments.BaseFragment
+import com.example.baseproject.core.fragments.DaggerSharedFragment
 
-class DetailFragment : BaseFragment() {
+class DetailFragment : DaggerSharedFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,

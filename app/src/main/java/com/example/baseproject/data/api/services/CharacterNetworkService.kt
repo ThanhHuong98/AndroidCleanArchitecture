@@ -8,7 +8,7 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface ABCNetworkService {
+interface CharacterNetworkService {
     @GET("users")
     fun getUsersByName(
         @Query("username") username: String

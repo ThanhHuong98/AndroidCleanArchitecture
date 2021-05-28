@@ -1,11 +1,12 @@
 package com.example.baseproject.vm
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.baseproject.core.vm.BaseViewModel
+import com.example.baseproject.data.models.Character
+import com.example.baseproject.data.models.CharacterList
 import com.example.baseproject.data.models.User
-import com.example.baseproject.domain.repository.ABCRepository
+import com.example.baseproject.domain.repository.CharacterRepository
 import com.example.baseproject.utils.extension.addTo
 import com.example.baseproject.utils.extension.applySingleIoScheduler
 import kotlinx.coroutines.launch
@@ -13,7 +14,7 @@ import java.lang.Exception
 
 import javax.inject.Inject
 
-class MainViewModel @Inject constructor(private val repository: ABCRepository): BaseViewModel() {
+class MainViewModel @Inject constructor(private val repository: CharacterRepository): BaseViewModel() {
 
     private val _users: MutableLiveData<List<User>> = MutableLiveData()
     val users: LiveData<List<User>> = _users
@@ -45,11 +46,15 @@ class MainViewModel @Inject constructor(private val repository: ABCRepository): 
         }
     }
 
+    private val _characterList: MutableLiveData<List<Character>> = MutableLiveData()
+    val characterList: LiveData<List<Character>> = _characterList
+
     fun fetchCharacters() {
         viewModelScope.launch {
             try {
                 val result = repository.getAllCharacters()
-                val data = result.body()
+                val data = result.body()?.characterList?: emptyList<Character>()
+                _characterList.postValue(data)
             } catch (e: Exception) {
                 e.printStackTrace()
             }
