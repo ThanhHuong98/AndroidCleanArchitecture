@@ -1,5 +1,5 @@
 # BaseProject - Code base for Android Application
-##### This is my base project for android coding. I have used the rich Jetpack libs and implement kết hớp MVVM với  Clean Architecture for my base project.
+This is my base project for android coding. I have used the rich Jetpack libs and combine between MVVM and Clean Architecture for my base project.
 
 ## Table of contents
 * [Architecture](#architecture)
@@ -7,7 +7,7 @@
 
 ## Architecture
 ### Clean Architecture
-![[Screenshot](attach_clean_architecture.png)](https://www.toptal.com/android/android-apps-mvvm-with-clean-architecture)
+[![Screenshot](attach_clean_architecture.png)](https://www.toptal.com/android/android-apps-mvvm-with-clean-architecture)
 
 ### Architecture Component
 [![Screenshot](attach_architecture_component.png)](https://developer.android.com/jetpack/guide)
